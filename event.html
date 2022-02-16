@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Event niya click </h1>
+     <button onClick="document.body.style.backgroundColor='yellow'">Click me</button>
+    <button id="green-button">Click me</button>
+    <button id="blue-button">Click me</button>
+    <button id="golden-button">Click me</button>
+    <button id="pink-button">Click Me</button>
+    <button id="lighBlue-button">Click Me</button>
+    <script src="./events.js"></script> -->
+    <p id="clicking-method"></p>
+    <input type="text" id="name-field">
+    <button id="update-name">Update</button>
+    <button onclick="handleJustFuctionClick()">Just function</button>
+    <button id="handleClickevent">direct add event Listener</button>
+    <script>
+        function handleJustFuctionClick() {
+            const p = document.getElementById('clicking-method');
+            p.innerText = 'set by using'
+        }
+        document.getElementById('handleClickevent').addEventListener('click', function () {
+            const p = document.getElementById('clicking-method')
+            p.innerText = 'Will this work?'
+        })
+        document.getElementById('update-name').addEventListener('click', function () {
+            const nameField = document.getElementById('name-field')
+            const p = document.getElementById('clicking-method');
+            p.innerText = nameField.value
+            nameField.value = ''
+        })
+    </script>
+</body>
+
+</html>
